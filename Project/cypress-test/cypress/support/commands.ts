@@ -35,3 +35,9 @@
 //     }
 //   }
 // }
+
+import loginPage from '../pages/loginPage';
+
+Cypress.Commands.add('login', (username: string, password: string) => {
+  loginPage.login(username, password);
+});
