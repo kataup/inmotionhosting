@@ -1,8 +1,17 @@
-import loginPage from "../pages/loginPage"
+import loginPage from "../pages/loginPage";
 
 describe('Invalid login flow', () => {
-  it('should show an error message', () => {
-    cy.visit('https://secure1.inmotionhosting.com/index/login')
-    loginPage.usernameInput()
-  })
-})
+  beforeEach(() => {
+    cy.visit('https://secure1.inmotionhosting.com/index/login');
+  });
+
+  it('should show an error message with invalid credentials', () => {
+    cy.fixture('login').then((loginData) => {
+      const { username, password } = loginData.invalidUser;
+      loginPage.login(username, password);
+
+    
+      cy.get('.alert').should('contain.text', 'Invalid e-mail address and/or password');
+    });
+  });
+});
