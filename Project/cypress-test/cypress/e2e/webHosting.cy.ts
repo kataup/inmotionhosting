@@ -8,11 +8,5 @@ describe('Vyber druhý plán na stránce Web Hosting', () => {
       cy.url().should('include', '/web-hosting')
     
   })
-  it('Should show all plans and pricing', () => {
-    cy.visit('https://www.inmotionhosting.com/vps-hosting')
-
-
-    
-  });
 
 });

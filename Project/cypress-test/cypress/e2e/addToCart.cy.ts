@@ -1,5 +1,4 @@
 import  WebHostingPage  from '../pages/WebHostingPage'
-import vpsHosting from '../pages/vpsHosting';
 import  VpsHosting from '../pages/vpsHosting'
 
 describe('Select the secong plan === Web Hosting', () => {
@@ -13,9 +12,9 @@ describe('Select the secong plan === Web Hosting', () => {
   it('Should show all plans and pricing', () => {
     cy.visit('https://www.inmotionhosting.com/vps-hosting')
     VpsHosting.clickSeePlansAndPricing();
-    vpsHosting.clickThirdPlan();
+    VpsHosting.clickThirdPlan();
 
-    
+    cy.url().should('cotains', 'Domain')
   });
 
 });

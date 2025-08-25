@@ -1,7 +1,10 @@
   export default new class WebHostingPage {
-
+  
+  selectPlan() {
+    return cy.get('[button="href="/vps-hosting"]').should('contains','VPS 4 vCPU')
+  }
+  
   clickSecondPlan() {
-    cy.contains('Select Plan').should('exist')
-    cy.contains('Select Plan').eq(1).click({ force: true });
+    this.selectPlan().eq(1).click({ force: true })
   }
 }
