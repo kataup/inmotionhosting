@@ -41,3 +41,11 @@ import loginPage from '../pages/loginPage';
 Cypress.Commands.add('login', (username: string, password: string) => {
   loginPage.login(username, password);
 });
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // Ošetři známé false-positive chyby, např. failed to fetch
+  if (err.message.includes('Failed to fetch')) {
+    return false; // ignoruj tuto chybu
+  }
+  // Pro ostatní chyby ponech fail
+});

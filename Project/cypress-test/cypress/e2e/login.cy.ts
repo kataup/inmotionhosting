@@ -6,12 +6,13 @@ describe('Invalid login flow', () => {
   });
 
   it('should show an error message with invalid credentials', () => {
+
     cy.fixture('login').then((loginData) => {
       const { username, password } = loginData.invalidUser;
       loginPage.login(username, password);
 
     
-      cy.get('.alert').should('contain.text', 'Invalid e-mail address and/or password');
+      cy.url().should('contain.text', 'Invalid e-mail address and/or password');
     });
   });
 });
