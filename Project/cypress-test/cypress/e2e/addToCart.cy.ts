@@ -14,7 +14,7 @@ describe('Select the secong plan === Web Hosting', () => {
     VpsHosting.clickSeePlansAndPricing();
     VpsHosting.clickThirdPlan();
 
-    cy.url().should('cotains', 'Domain')
+    cy.url().should('contains', 'Domain')
   });
 
 });

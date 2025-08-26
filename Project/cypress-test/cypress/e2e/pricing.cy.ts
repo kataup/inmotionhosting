@@ -1,4 +1,3 @@
-
 import PricingPage from '../pages/pricingPage'
 
 describe('Pricing page - Shared Hosting selection', () => {

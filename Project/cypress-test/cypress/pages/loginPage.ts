@@ -9,6 +9,10 @@ export default new class LoginPage {
   showPasswordButton() {
     return cy.get('input[id="password-toggle"]')
   }
+
+  errorMessage() {
+    return cy.get('ul[class="errors"]').should('be.visible')
+  }
   loginButton() {
     return cy.get('button[id="login-submit"]');
   }

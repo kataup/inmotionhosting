@@ -43,9 +43,8 @@ Cypress.Commands.add('login', (username: string, password: string) => {
 });
 
 Cypress.on('uncaught:exception', (err, runnable) => {
-  // Ošetři známé false-positive chyby, např. failed to fetch
+
   if (err.message.includes('Failed to fetch')) {
-    return false; // ignoruj tuto chybu
+    return false;
   }
-  // Pro ostatní chyby ponech fail
 });
