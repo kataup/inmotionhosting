@@ -1,6 +1,6 @@
 import  WebHostingPage  from '../pages/WebHostingPage'
 
-describe('Vyber druhý plán na stránce Web Hosting', () => {
+describe('Choose plan on Web Hosting', () => {
   it('Select the second plan', () => {
     cy.visit('https://www.inmotionhosting.com/web-hosting')
     WebHostingPage.clickSecondPlan()

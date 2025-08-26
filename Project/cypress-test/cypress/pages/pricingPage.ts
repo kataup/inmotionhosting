@@ -1,22 +1,15 @@
 export default new class PricingPage {
 
  clickSharedHostingTab() {
-    cy.contains('button, a', 'Shared Hosting')
-      .then($tab => {
-        if (!$tab.hasClass('active') && $tab.attr('aria-selected') !== 'true') {
-          cy.wrap($tab).click({ force: true });
-        }
-      });
-  }
+   return cy.get('span[class="button-text"]')
 
-  selectFirstSharedHostingPlan() {
- 
-    cy.get('.imh-term-switcher > div:visible')  
-      .within(() => {
-        cy.contains('button, a', 'Select')
-          .filter(':visible')
-          .first()
-          .click({ force: true });
-      });
+ }
+  selectPlan() {
+    return cy.get('a[class="atc central-atc btn-primary"]')
   }
-}
+   sharedHostingTab() {
+    this.clickSharedHostingTab().click({force:true })
+
+  
+    }
+  }
