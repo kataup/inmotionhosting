@@ -10,7 +10,7 @@ describe('Invalid login flow', () => {
     cy.fixture('login').then((loginData) => {
       const { username, password } = loginData.invalidUser;
       loginPage.login(username, password);
-      loginPage.errorMessage().should('contain', 'Invalid e-mail address and/or password');
+      loginPage.errorMessage().should('be.visible').contains('Invalid e-mail address and/or password')
     });
   });
 });

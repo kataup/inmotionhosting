@@ -11,7 +11,7 @@ export default new class LoginPage {
   }
 
   errorMessage() {
-    return cy.get('ul[class="errors"]').should('be.visible')
+    return cy.get('ul[class="errors"]')
   }
   loginButton() {
     return cy.get('button[id="login-submit"]');

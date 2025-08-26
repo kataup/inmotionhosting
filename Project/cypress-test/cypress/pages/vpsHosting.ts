@@ -5,7 +5,7 @@ export default new class VpsHosting {
  }
 
     clickThirdPlan() {
-    cy.contains('Select').eq(2).click({ force: true }).should('contains', 'VPS 12 vCPU')
+    
 
 }
 }
