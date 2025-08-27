@@ -1,12 +1,15 @@
 export default new class VpsHosting {
 
+getVpsHosting() {
+   return cy.contains('a', 'VPS Hosting')
+}
  clickSeePlansAndPricing() {
-    cy.get('[class="btn-primary hero-pricing-cta-text cta-pricing"]')
+   return cy.contains('a', 'See Plans and Pricing')
  }
 
-    clickThirdPlan() {
-    
+clickOneMonthPlan() {
+   return cy.contains('button','1 Month')
+}
+}
 
-}
-}
  

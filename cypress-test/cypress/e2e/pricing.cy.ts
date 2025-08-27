@@ -1,15 +1,17 @@
-import PricingPage from '../pages/pricingPage'
+import pricingPage from '../pages/pricingPage'
 
-describe('Pricing page - Shared Hosting selection', () => {
+describe('Menu navigation test', () => {
+  it('should go to Pricing -> Shared Hosting -> Power plan', () => {
+  
+    cy.visit('https://www.inmotionhosting.com/')
 
-  beforeEach(() => {
-    cy.visit('https://www.inmotionhosting.com/pricing');
-  });
+   
+    pricingPage.getPricingMenu().click()
+    cy.url().should('include', '/pricing')
+    pricingPage.getSharedHosting().click()
 
-  it('should select Shared Hosting plan', () => {
-    PricingPage.clickSharedHostingTab().click()
-    PricingPage.selectPlan().click()
-
-    cy.url().should('include', '/domain')
-  });
-});
+  pricingPage.getPowerPlanSelectButton()
+  .should('be.visible')
+  .click();
+  })
+})

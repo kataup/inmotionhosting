@@ -2,7 +2,6 @@ import menuCompontent from "./components/menuCompontent"
 
 export default new class MainPage {
 
-
 searchInput() {
     return cy.get('input[type="search"]')
   }
