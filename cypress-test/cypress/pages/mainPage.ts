@@ -1,15 +1,16 @@
-import menuCompontent from "./components/menuCompontent"
-
 export default new class MainPage {
 
-searchInput() {
-    return cy.get('input[type="search"]')
+  getHeading() {
+    return cy.contains('h2', 'The Hosting Partner Behind Ambitious Brands')
   }
 
-  viewPlans() {
-    return cy.get('class["ppb-button.btn-tertiary.cta-pricing"]')
+  buttonWebHostingPlans() {
+    return cy.contains('a', ' Web Hosting Plans')
   }
 
+  loginButton() {
+    return cy.contains('a', 'Login')
+  }
 
 }
 
