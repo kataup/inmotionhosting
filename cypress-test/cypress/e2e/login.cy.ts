@@ -2,8 +2,8 @@ import loginPage from "../pages/loginPage";
 
 describe('Invalid login flow', () => {
   beforeEach(() => {
-    cy.visit('https://secure1.inmotionhosting.com/index/login');
-  });
+    cy.visit('https://secure1.inmotionhosting.com/index/login')
+  })
 
   it('should show an error message with invalid credentials', () => {
 

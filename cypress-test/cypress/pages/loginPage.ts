@@ -16,6 +16,7 @@ export default new class LoginPage {
   loginButton() {
     return cy.get('button[id="login-submit"]');
   }
+
   login(username: string, password: string) {
     this.usernameInput().type(username)
     this.passwordInput().type(password)

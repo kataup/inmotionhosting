@@ -1,0 +1,11 @@
+{
+  "email": "test@example.com",
+  "password": "StrongPassword123",
+  "firstName": "Jan",
+  "lastName": "Novak",
+  "address1": "Hlavní 123",
+  "city": "Praha",
+  "state": "Hlavní město Praha",
+  "postalCode": "11000",
+  "country": "Czech Republic"
+}

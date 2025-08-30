@@ -1,8 +1,14 @@
 import AboutUs from "../pages/aboutUs"
 
 describe('About Us test', () => {
-    it('Should find about us page', ()=> {
-cy.visit('https://www.inmotionhosting.com/')
-AboutUs.companyButton().click()
+    beforeEach(() => {
+        cy.visit('https://www.inmotionhosting.com/')
     })
+})
+    it('Should find About us page and email contact', () => {
+        AboutUs.aboutUs2()
+cy.fixture('email').then((emailData) => {
+      const email = emailData.email
+      AboutUs.newsletter(email)
+})
 })
