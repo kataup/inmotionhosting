@@ -5,7 +5,7 @@ describe('Invalid login flow', () => {
     cy.visit('https://secure1.inmotionhosting.com/index/login')
   })
 
-  it('should show an error message with invalid credentials', () => {
+  it('Should show an error message with invalid credentials', () => {
 
     cy.fixture('login').then((loginData) => {
       const { username, password } = loginData.invalidUser;

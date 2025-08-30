@@ -5,7 +5,7 @@ describe('InMotion Hosting Homepage Elements', () => {
         cy.visit('https://www.inmotionhosting.com/')
     })
 })
-it('Should display essential elements on the homepage', () => {
+it('Should display elements on the homepage', () => {
     mainPage.getHeading().should('be.visible')
     mainPage.buttonWebHostingPlans().should('be.visible')
     mainPage.loginButton().should('be.visible')
