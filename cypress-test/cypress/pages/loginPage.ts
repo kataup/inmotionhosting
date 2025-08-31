@@ -1,9 +1,9 @@
 export default new class LoginPage {
   usernameInput() {
-    return cy.get('input[id="username"]');
+    return cy.get('input[id="username"]')
   }
   passwordInput() {
-    return cy.get('input[id="password"]');
+    return cy.get('input[id="password"]')
   }
 
   showPasswordButton() {
@@ -14,7 +14,7 @@ export default new class LoginPage {
     return cy.get('ul[class="errors"]')
   }
   loginButton() {
-    return cy.get('button[id="login-submit"]');
+    return cy.get('button[id="login-submit"]')
   }
 
   login(username: string, password: string) {
