@@ -13,7 +13,7 @@ export default new class PricingPage {
   }
 
   getPowerPlanCard() {
-    return cy.contains('.imh-rostrum-card', 'Power')
+    return cy.contains('a', 'Power')
   }
 
   clickPowerPlanSelect() {
